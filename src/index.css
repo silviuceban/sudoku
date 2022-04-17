@@ -1,0 +1,320 @@
+:root {
+  --darkBlue: #344861;
+  --lightBlue: #0072e3;
+  --paleBlue: #eaeef4;
+  --paleBlueHover: #d7e1f0;
+
+  --defaultWidth: 400px;
+  --darkBlueBorder: 2px solid var(--darkBlue);
+  --noteAndGameSquares_WH: 44px;
+  /* --lightGreyBorder: 0.5px solid lightgray; */
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dot {
+  color: var(--darkBlue);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.5rem;
+}
+
+h1 {
+  color: var(--lightBlue);
+}
+
+.header {
+  display: flex;
+
+  align-items: center;
+  padding: 1rem 0 1rem 2rem;
+  border-bottom: 0.5px solid lightgrey;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.timerBlock {
+  display: flex;
+  height: 3rem;
+  /* background-color: #3448615d; */
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+  color: rgb(146, 145, 145);
+}
+.play_pause {
+  width: 20px;
+  margin: 0 0 0 5px;
+  cursor: pointer;
+}
+.gameZone {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+.curtain {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./icons/redCurtain.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: none;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+}
+.curtainParagraph {
+  color: white;
+  font-size: 3rem;
+}
+.container_gameBlock {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.border_right {
+  border-right: 1px solid var(--darkBlue);
+}
+
+.border_bottom {
+  border-bottom: 1px solid var(--darkBlue);
+}
+
+.grid {
+  border: var(--darkBlueBorder);
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  height: var(--defaultWidth);
+  width: var(--defaultWidth);
+}
+
+.numberCell {
+  display: flex;
+  /* display: none; */
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  flex-wrap: wrap;
+  width: var(--noteAndGameSquares_WH);
+  height: var(--noteAndGameSquares_WH);
+  box-shadow: 0 0 0.9px rgb(66, 66, 66);
+}
+
+.border_table {
+  z-index: -2;
+  position: absolute;
+  top: 0;
+  border: 3px solid transparent;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  height: var(--defaultWidth);
+  width: var(--defaultWidth);
+}
+
+.noteCell {
+  display: flex;
+  /* display: none; */
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  width: var(--noteAndGameSquares_WH);
+  height: var(--noteAndGameSquares_WH);
+  box-shadow: 0 0 0.9px rgb(66, 66, 66);
+
+  padding: 0.06rem;
+}
+.noteNumber {
+  width: 13px;
+  height: 13px;
+  font-size: 0.55rem;
+  /* color: rgb(104, 104, 104); */
+  color: rgba(104, 104, 104, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: var(--defaultWidth);
+  margin-left: 10px;
+}
+
+.flex_row {
+  display: flex;
+  flex: 1;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.flex2 {
+  flex: 2;
+}
+
+.flex3 {
+  flex: 3;
+}
+
+.marginBottom20px {
+  margin-bottom: 20px;
+}
+
+.new_game_btn {
+  background-color: var(--lightBlue);
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  max-height: 40px;
+  cursor: pointer;
+}
+
+.new_game_btn:hover {
+  background-color: #0063c5;
+}
+
+.buttons_pannel {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 5px 0 5px;
+}
+
+.icon {
+  width: 40px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.num_pad {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.num_pad_button {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  border-radius: 10px;
+  border: 2px solid white;
+  background-color: var(--paleBlue);
+  color: var(--lightBlue);
+  cursor: pointer;
+}
+
+.num_pad_button:hover {
+  background-color: var(--paleBlueHover);
+}
+
+/* ========================== */
+
+.purpleNumber {
+  color: purple;
+}
+
+.redNumber {
+  color: red;
+}
+
+.greyNumber {
+  color: rgb(66, 66, 66);
+}
+.predefined {
+  color: #52799f;
+  /* color: red; */
+}
+
+.highlightedCell {
+  background-color: #c6d9f652;
+}
+.selectedDuplicateCell {
+  background-color: #96d0f38a;
+  color: #b02d2d;
+}
+.selectedCell {
+  background-color: #96d0f38a;
+}
+.appropriateDuplicateCell {
+  background-color: #119cec3d;
+}
+
+.appropriateDuplicateCellSelectedCell {
+  background-color: #04a3ff84;
+  color: #004f7d;
+}
+
+.duplicateCell {
+  background-color: #ec11113d;
+  color: #b02d2d;
+}
+.wrongValueSelectedCell {
+  background-color: #04a3ff84;
+  color: rgb(124, 8, 8);
+}
+.displayFlex {
+  display: flex;
+}
+
+.displayNone {
+  display: none;
+}
+
+/* ============RESPONSIVE============= */
+
+@media screen and (max-width: 730px) {
+  .container_gameBlock {
+    flex-direction: column;
+    align-items: center;
+  }
+  .gameZone {
+    width: 364px;
+  }
+  .controls {
+    margin-left: 0;
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+  }
+  .num_pad {
+    flex-direction: row;
+    height: auto;
+  }
+  .new_game_btn {
+    min-height: 40px;
+  }
+  .grid {
+    --defaultWidth: 364px;
+  }
+  .numberCell {
+    --noteAndGameSquares_WH: 40px;
+  }
+  .noteCell {
+    --noteAndGameSquares_WH: 40px;
+    padding: 0;
+  }
+}
